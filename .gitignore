@@ -1,0 +1,27 @@
+# Python
+venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+backend/models/*.pkl
+backend/models/*.txt
+backend/models/*.pth
+
+# Node / React
+node_modules/
+dist/
+.env
+.DS_Store
+
+# Data (Optional to exclude if too large, but 3.7MB is fine)
+# backend/data/Delivery_Logistics.csv
+
+# IDEs
+.vscode/
+.idea/
+.gemini/
+.agents/
+tp/
+out.json
+TEST_SET_IDS.txt
+evaluate_output.txt

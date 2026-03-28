@@ -1,0 +1,39 @@
+@import "tailwindcss";
+@import "leaflet/dist/leaflet.css";
+
+@layer base {
+  body {
+    @apply bg-slate-900 text-slate-100 min-h-screen font-sans antialiased;
+    background-image: radial-gradient(circle at 10% 20%, rgb(14, 26, 48) 0%, rgb(9, 14, 23) 90%);
+  }
+}
+
+.glass-panel {
+  @apply bg-slate-800/50 backdrop-blur-md border border-slate-700/50 rounded-2xl shadow-xl;
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-up {
+  animation: slideUp 0.5s ease-out forwards;
+}
+
+/* Custom range slider thumb */
+input[type=range]::-webkit-slider-thumb {
+  @apply w-4 h-4 rounded-full bg-blue-500 cursor-pointer appearance-none;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.5);
+}
